@@ -1,0 +1,33 @@
+/*
+ * Two identical overdamped AC-driven Josephson junctions coupled by external resistive shunt
+ *
+ * \dot{\phi}_1 = - sin(\phi_1) + i_1(t) + \alpha[I_2(t) - sin(\phi_2)] + \sqrt{Dg}\eta_1(t)
+ * \dot{\phi}_2 = - sin(\phi_2) + i_2(t) + \alpha[I_1(t) - sin(\phi_1)] + \sqrt{Dg}\eta_2(t)
+ *
+ * see J. Spiechowicz et al., Acta Phys. Polon. B 43, 1203 (2012)
+ *
+ * (C) 2013 Jakub Spiechowicz
+ *          
+ *          Institute of Physics, University of Silesia, Katowice
+ *
+ * Features included:
+ *
+ *  - Gaussian and Poissonian white noise
+ *  - exponential Poissonian kicks amplitude distribution
+ *  - simplified weak order 1.0 regular euler-maruyama scheme
+ *  - simplified weak order 2.0 adapted predictor-corrector scheme
+ *  - asymptotic long time average velocity <<v>> 
+ *  - ensemble averaged trajectory <x>(t)
+ *  - the final position of all paths for histogram generation
+ *  - path parameters folding for utilization of single precision arithmetics
+ *  - scan over multiple values of the system parameters in a single kernel call
+ *  - simultaneous scan over two system parameters
+ *
+ * TO DO:
+ *
+ *  - more output modes (correlation function and power spectrum)
+ *  - dichotomic noise
+ *  - different Poissonian kicks amplitude distribution
+ *  - recode command line parsing for use of less options
+ *
+ */
