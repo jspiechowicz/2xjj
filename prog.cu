@@ -452,9 +452,9 @@ __global__ void run_moments(float *d_x1, float *d_x2, float *d_w, float *d_x1b, 
     //counters for folding
     float x1fc, x2fc, wfc;
     
-    x1fc = 0;
-    x2fc = 0;
-    wfc = 0;
+    x1fc = 0.0f;
+    x2fc = 0.0f;
+    wfc = 0.0f;
 
     int l_2ndorder, pcd;
 
@@ -538,9 +538,9 @@ __global__ void run_traj(float *d_x1, float *d_x2, float *d_w, curandState *d_st
     //counters for folding
     float x1fc, x2fc, wfc;
     
-    x1fc = 0;
-    x2fc = 0;
-    wfc = 0;
+    x1fc = 0.0f;
+    x2fc = 0.0f;
+    wfc = 0.0f;
 
     int l_2ndorder, pcd;
 
