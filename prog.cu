@@ -831,7 +831,8 @@ int main(int argc, char **argv)
                         cudaMemcpyToSymbol(d_amp, &h_dy, sizeof(float));
                         break;
                     case 'w':
-                        cudaMemcpyToSymbol(d_omega, &h_dy, sizeof(float));
+                        h_omega = h_dy;
+                        cudaMemcpyToSymbol(d_omega, &h_omega, sizeof(float));
                         break;
                     case 'f':
                         cudaMemcpyToSymbol(d_force, &h_dy, sizeof(float));
