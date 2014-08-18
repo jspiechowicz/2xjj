@@ -1,4 +1,4 @@
-CFLAGS =-arch=sm_13 -m64 --use_fast_math -O3
+CFLAGS =--use_fast_math -O3
 CURAND =-L/usr/local/cuda/lib64 -lcurand
 CC = nvcc
 
